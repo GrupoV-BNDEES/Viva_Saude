@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Viva Saúde</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+        integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+        integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+        crossorigin="anonymous"></script>
+
+    <nav>
+        <div class="container">
+            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="index.html" role="tab"
+                    aria-controls="nav-home" aria-selected="true">Sobre nós</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="CadastroPacientes.html"
+                    role="tab" aria-controls="nav-profile" aria-selected="false">Cadastro</a>
+                <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="AreaDoPaciente.html"
+                    role="tab" aria-controls="nav-profile" aria-selected="false">Paciente</a>
+
+                <nav class="navbar fixed-bottom navbar-light bg-light">
+
+                </nav>
+            </div>
+    </nav>
+</head>
+
+<body>
+
+    <form>
+
+        <blockquote class="blockquote text-center">
+            <div class="card mb-3" class="text-center">
+
+                <div class="card-body">
+                    <h5 class="card-title">Viva Saúde</h5>
+                    <p class="card-text"></br>Com o intuito de ajudar a diminuir a fila do SUS(Sistema Único de
+                        Saúde), desenvolvemos este site para que milhares de cidadãos brasileiros tenham a
+                        facilidade de acesso ao atendimento. Onde é possível realizar Pré-Consulta com profissionais
+                        especializados e caso precise
+                        de um especialista o paciente será diretamente encaminhado para seu devido especialista
+                        com sua consulta marcada..</p>
+
+                </div>
+            </div>
+
+            <a href="CadastroPacientes.html" class="btn btn-primary">Cadastrar-se</a>
+            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
+                ...</div>
+            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-contact-tab">
+                ...</div>
+            </div>
+            </div>
+            </div>
+
+
+            <div class="container">
+                <div class="card bg-dark text-black text-center ">
+                    <img class="card-img-top" src="img/front_1.jpg" alt="" width="40%">
+                    <div class=" card-img-overlay">
+                        <div class="c" padding="" style="width: 200px;">
+                            <div class="card" style="width: 18rem;">
+                                <div class="card-body">
+
+                                    <form class="px-4 py-3">
+                                        <div class="form-group">
+                                            <label for="usuario"> Usuario</label>
+                                            <input type="usuario" class="form-control" id="usuario"
+                                                placeholder="email@exemplo.com">
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="senha">Senha</label>
+                                            <input type="password" class="form-control" id="senha" placeholder="Senha">
+                                        </div>
+                                        </br>
+                                        <button type="submit" class="btn btn-primary" onclick="logar()">Entrar</button>
+
+
+                                    </form>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="#">Esqueceu a senha?</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </blockquote>
+        <div class="form-row">
+            <div class="card-group">
+                <div class="card">
+
+                    <div class="card-body">
+                        <h5 class="card-title"> 80% de redução das filas do SUS </h5>
+                        <p class="card-text">Com pacientes sendo diagnosticados em poucos minutos, será possível indicar
+                            o
+                            uso
+                            de medicamento com envio de receita em formato PDF, caso contrário o mesmo será encaminhado
+                            para tele-consulta </p>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div class="card-body">
+                        <h5 class="card-title">Inteligência Artificial na saúde</h5>
+                        <p class="card-text"> Resultado de diagnosticos básicos em poucos minutos</p>
+                    </div>
+                </div>
+                <div class="card">
+
+                    <div class="card-body">
+                        <h5 class="card-title">O maior registro em banco de dados </h5>
+                        <p class="card-text">Nosso objetivo é que grande parte da população consiga usufruir de nossos
+                            recursos
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+                <h3 class="text-center">Contato</h3>
+                <p class="text-center">www.vivasaude.org.br</p>
+                <p class="text-center">contato@vivasaude.org.br</p>
+                <p class="text-center">Telefone 1746</p>
+                </br>
+                </br>
+            </div>
+        </div>
+    </form>
+    <script>
+
+        function logar() {
+            var usuario = document.getElementById("usuario");
+            var senha = document.getElementById("senha");
+
+            console.log(usuario.value + senha.value);
+
+            if (usuario.value == "admin@admin.com" && senha.value == "admin") {
+                localStorage.setItem("acesso", true);
+
+                Window.location.href = "AreaDoPaciente.html";
+
+            } else {
+                alert(" Usuario ou senha invalidos");
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>
